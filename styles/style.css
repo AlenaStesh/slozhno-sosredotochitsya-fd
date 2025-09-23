@@ -1,5 +1,28 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 .page {
   background-color: var(--bg-color, #000025);
   padding-inline: 10px;
@@ -122,6 +145,7 @@
   color: var(--subtitle-color, #000028);
   background-color: var(--accent-color, #ff0070);
   overflow-wrap: break-word;
+  margin-bottom: 10px;
 }
 
 .main__subtitle {
@@ -149,9 +173,50 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
+  width: 100%;
+}
+
+.content-section {
+  font-size: var(--main-font-size, 18px);
+  line-height: 23.4px;
 }
 
 .content-text {
   margin-bottom: 20px;
 }
 
+.subtitle__diffrent-font {
+  font-family: var(--main-font, "IBM Plex mono" );
+  font-size: var(--main-font-size, 18px);
+  font-weight: var(--font-weight-regular, 400);
+  line-height: 23.4px;
+  margin-top: 19px;
+  margin-bottom: 10px;
+}
+
+.gallery {
+  margin-bottom: 40px;
+}
+
+.gallery__container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  color: var(--title-color, #db00ff);
+  text-shadow: 1px 2px 0 var(--accent-color, #ff0070);
+  font-family: var(--main-font, "IBM Plex mono" );
+  font-weight: var(--font-weight-bold, 700);
+  font-size: 116px;
+  line-height: 83%;
+}
