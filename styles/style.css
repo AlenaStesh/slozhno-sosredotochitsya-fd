@@ -24,6 +24,11 @@ figure {
 }
 
 .page {
+  background-image: var(--cover-image-dark);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: var(--bg-color, #000025);
   padding-inline: 10px;
   font-family: var(--main-font, "IBM Plex mono");
@@ -44,6 +49,10 @@ figure {
   margin-bottom: 40px;
 }
 
+.decorated-zone {
+  position: relative;
+}
+
 .decorated-zone::before {
   content: "";
   position: absolute;
@@ -51,7 +60,7 @@ figure {
   block-size: 25px;
   inline-size: 25px;
   top: 10px;
-  right: 10px;
+  right: 0;
   border-block-start: 1px solid var(--accent-color, #ff0070);
   border-inline-end: 1px solid var(--accent-color, #ff0070);
 }
@@ -63,7 +72,7 @@ figure {
   block-size: 25px;
   inline-size: 25px;
   bottom: 10px;
-  left: 10px;
+  left: 0;
   border-block-end: 1px solid var(--accent-color, #ff0070);
   border-inline-start: 1px solid var(--accent-color, #ff0070);
 }
@@ -72,7 +81,8 @@ figure {
   position: absolute;
   display: flex;
   align-items: center;
-  right: 19px;
+  top: 10px;
+  right: 9px;
   gap: 10px;
   color: var(--accent-color, #ff0070);
   font-family: var(--main-font, "IBM Plex mono");
@@ -107,7 +117,6 @@ figure {
 
 .header__theme-menu-item {
   color: var(--accent-color, #ff0070);
-  
 }
 
 .header__theme-menu-button {
@@ -120,8 +129,9 @@ figure {
   
 }
 
-.header__theme-menu-button:active {
-  outline: 2px solid var(--accent-color, #ff0070);
+.header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color, #ff0070);
+  outline-offset: 2px;
 }
 
 .header__title {
@@ -134,9 +144,11 @@ figure {
 }
 
 .header__subtitle {
-  white-space: normal;
+  align-self: center;
+  font-size: var(--main-font-size, 18px);
+  color: var(--subtitle-color, #000028);
+  background-color: var(--accent-color, #ff0070);
   overflow-wrap: break-word;
-  word-break: normal;
 }
 
 .subtitle {
@@ -160,6 +172,10 @@ figure {
 .content-text {
   color: var(--text-color, #f1b2ce);
   background-color: inherit;
+}
+
+.text-link {
+  text-shadow: 2px 2px var(--accent-color, #ff0070);
 }
 
 .subtitle__diffrent-font {
