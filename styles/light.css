@@ -5,10 +5,28 @@
 */
 
 :root.theme-light {
-  --cover-image-light: url(../images/cover-image-light.png);
+  --cover-image: url(../images/cover-image-light.png);
+  --bg-color: #fff1f7;
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
   --subtitle-color: #353430;
   --text-color: #353430;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --cover-image: url(../images/cover-image-light.png);
+  --bg-color: #fff1f7;
+  --accent-color: #ff8dcb;
+  --title-color: #ffc2e6;
+  --subtitle-color: #353430;
+  --text-color: #353430;
+  }
+}
+
+.theme-light .header__block-right {
+  display: none;
+}
+
+
  
