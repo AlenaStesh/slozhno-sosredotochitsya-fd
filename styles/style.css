@@ -52,8 +52,8 @@ img, svg {
   inline-size: 25px;
   top: 10px;
   right: 0;
-  border-block-start: 1px solid var(--accent-color, #ff0070);
-  border-inline-end: 1px solid var(--accent-color, #ff0070);
+  border-block-start: 1px solid var(--text-color, #ff0070);
+  border-inline-end: 1px solid var(--text-color, #ff0070);
 }
 
 .decorated-zone::after {
@@ -64,8 +64,8 @@ img, svg {
   inline-size: 25px;
   bottom: 10px;
   left: 0;
-  border-block-end: 1px solid var(--accent-color, #ff0070);
-  border-inline-start: 1px solid var(--accent-color, #ff0070);
+  border-block-end: 1px solid var(--text-color, #ff0070);
+  border-inline-start: 1px solid var(--text-color, #ff0070);
 }
 
 .header__block-right {
@@ -89,8 +89,8 @@ img, svg {
   block-size: 9px;
   inline-size: 9px;
   border-radius: 50%;
-  background-color: var(--accent-color, #ff0070);
-  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);;
+  background-color: var(--text-color, #ff0070);
+  box-shadow: 0 0 4px 2px var(--text-color, #ff0070);;
 }
 
 .header__theme-menu {
@@ -106,7 +106,7 @@ img, svg {
 }
 
 .header__theme-menu-item {
-  color: var(--accent-color, #ff0070);
+  color: var(--text-color, #ff0070);
 }
 
 .header__theme-menu-button {
@@ -121,8 +121,20 @@ img, svg {
   
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--menu-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--text-color, #ff0070);
+}
+
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color, #ff0070);
+  outline: 1px solid var(--text-color, #ff0070);
   pointer-events: none;
 }
 
@@ -154,21 +166,30 @@ img, svg {
 
 .main__subtitle {
   margin-bottom: 20px;
-  color: var(--accent-color);
-  background-color: inherit;
+  color: var(--text-color,  #ff0070);
+  background-color: transparent;
   font-family: var(--main-font, "IBM Plex mono", monospace);
   font-size: var(--main-font-size, 18px);
   font-weight: var(--font-weight-bold, 700);
 }
 
 .content-text {
-  color: var(--text-color, #f1b2ce);
-  background-color: inherit;
+  color: var(--paragraph-color, #f1b2ce);
+  background-color: transparent;
   margin-bottom: 20px;
 }
 
 .text-link {
+  text-decoration: none;
   text-shadow: 2px 2px var(--accent-color, #ff0070);
+}
+
+.text-link:hover {
+  border-bottom: 1px solid var(--paragraph-color, #f1b2ce);
+}
+
+.text-link:focus-visible {
+  outline: 1px solid var(--paragraph-color, #f1b2ce);
 }
 
 .subtitle__diffrent-font {
@@ -219,14 +240,15 @@ img, svg {
 
 .footer__title {
   color: var(--title-color, #db00ff);
-  text-shadow: 1px 2px 0 var(--accent-color, #ff0070);
+  text-shadow: 2px 2px 0 var(--footer-title-color, #ff0070);
   font-family: var(--main-font, "IBM Plex mono", monospace);
   font-weight: var(--font-weight-bold, 700);
   font-size: 116px;
   line-height: 83%;
 }
 
-/* ниже - адаптив под другие экраны */
+/* ниже - адаптив под другие экраны.
+   планшетная версия. */
 
 @media (min-width: 668px) {
   .header {
@@ -353,6 +375,8 @@ img, svg {
 }
 }
 
+/* декстоп экраны */
+
 @media (min-width: 1024px) {
   .header {
     display: grid;
@@ -408,12 +432,10 @@ img, svg {
   }
 }
 
+/* скрытие декоративного элемента при светлой теме */
+
 @media (prefers-color-scheme: light) {
   .header__block-right {
     display: none;
-  }
-
-  .header__theme-menu-item {
-    color: var(--text-color, #353430);
   }
 }
