@@ -197,6 +197,10 @@ img, svg {
   background-color: var(--accent-color, #ff0070);
   font-size: var(--main-font-size, 18px);
   font-weight: var(--font-weight-regular, 400);
+  font-family: var(--main-font, "IBM Plex mono", monospace);
+  line-height: 23.4px;
+  margin-top: 19px;
+  margin-bottom: 10px;
 }
 
 .main-content {
@@ -213,8 +217,6 @@ img, svg {
 
 .subtitle__diffrent-font {
   font-family: var(--main-font, "IBM Plex mono", monospace);
-  font-size: var(--main-font-size, 18px);
-  font-weight: var(--font-weight-regular, 400);
   line-height: 23.4px;
   margin-top: 19px;
   margin-bottom: 10px;
