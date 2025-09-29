@@ -215,13 +215,6 @@ img, svg {
   line-height: 23.4px;
 }
 
-.subtitle__diffrent-font {
-  font-family: var(--main-font, "IBM Plex mono", monospace);
-  line-height: 23.4px;
-  margin-top: 19px;
-  margin-bottom: 10px;
-}
-
 .gallery {
   margin-bottom: 40px;
 }
