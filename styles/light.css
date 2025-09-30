@@ -34,5 +34,11 @@
   display: none;
 }
 
+@media (prefers-color-scheme: light) {
+  .header__block-right {
+    display: none;
+  }
+}
+
 
  
